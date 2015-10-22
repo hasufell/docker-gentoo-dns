@@ -30,5 +30,4 @@ COPY supervisord.conf /etc/supervisord.conf
 
 EXPOSE 53/udp 10000/tcp
 
-CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
-
+CMD exec /usr/bin/supervisord -n -c /etc/supervisord.conf
